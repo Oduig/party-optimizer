@@ -1,6 +1,4 @@
-kotlin-examples
+party-optimizer
 ===============
 
-[![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
-
-Various examples for Kotlin
+Party optimizer for WoW Classic
