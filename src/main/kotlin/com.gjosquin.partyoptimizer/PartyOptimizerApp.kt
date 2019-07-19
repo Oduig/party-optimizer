@@ -5,8 +5,8 @@ fun main(args: Array<String>) {
     val viableGroups = PartyOptimizer.viableGroupsOfSize(groupSize)
 
     viableGroups.forEachIndexed { index, group ->
-        val row = group.joinToString { it.name }
+        val row = group.joinToString { "${it.wowClass.name} (${it.name})" }
         println("$index: $row")
     }
-    println("There were ${viableGroups.size} viable groups.")
+    println("There were ${viableGroups.size} optimal groups.")
 }

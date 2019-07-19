@@ -18,13 +18,14 @@ class PartyOptimizerTests {
         val viableGroups = PartyOptimizer.viableGroupsOfSize(groupSize)
 
         // Assert
+        val viableClassGroups = viableGroups.map { group -> group.map { it.wowClass } }
         val expectedGroups = listOf(
                 listOf(Warrior, Priest, Shaman),
                 listOf(Warrior, Shaman, Mage),
                 listOf(Warrior, Shaman, Warlock)
         )
         expectedGroups.forEach { group ->
-            assertTrue(viableGroups.contains(group))
+            assertTrue(viableClassGroups.contains(group))
         }
     }
 }
