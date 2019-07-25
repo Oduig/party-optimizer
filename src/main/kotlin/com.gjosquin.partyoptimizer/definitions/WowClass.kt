@@ -21,7 +21,7 @@ data class WowClass(
                 faction = Faction.ALLIANCE)
         val Shaman = WowClass("Shaman", ArmorClass.LEATHER, ArmorClass.MAIL, canTank = false, canHeal = true,
                 faction = Faction.HORDE)
-        val Hunter = WowClass("Hunter", ArmorClass.MAIL, canTank = false, canHeal = false)
+        val Hunter = WowClass("Hunter", ArmorClass.LEATHER, ArmorClass.MAIL, canTank = false, canHeal = false)
         val Rogue = WowClass("Rogue", ArmorClass.LEATHER, canTank = false, canHeal = false)
         val Druid = WowClass("Druid", ArmorClass.LEATHER, canTank = true, canHeal = true)
         val Warlock = WowClass("Warlock", ArmorClass.CLOTH, canTank = false, canHeal = false)
@@ -39,6 +39,7 @@ data class WowClass(
                 { it.name }
         )
 
+        @Suppress("unused")
         val allClasses = listOf(
                 Warrior, Paladin, Shaman, Rogue, Hunter, Druid, Warlock, Mage, Priest
         ).sortedWith(classOrdering)
